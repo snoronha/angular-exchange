@@ -1,0 +1,40 @@
+<div fxLayout fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div fxFlex="15%"></div>
+  <div fxFlex="70%">
+    <form>
+      <p>&nbsp;</p>
+      <p>
+        <mat-form-field fxFlex="100%">
+          <input #email_address matInput required minlength="10" name="email_address"
+                 placeholder="Email Address">
+          <!-- div *ngIf="email_address.errors && (email_address.dirty || email_address.touched)" color="warn">
+            <div *ngIf="email_address.errors.required">
+              Email Address is required.
+            </div>
+            <div *ngIf="email_address.errors.minlength">
+              Name must be at least 4 characters long.
+            </div>
+          </div -->
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field fxFlex="100%"><input #password matInput placeholder="Password" type="password"></mat-form-field>
+      </p>
+      <p>&nbsp;</p>
+      <p>
+        <button mat-raised-button
+                (click)="onSubmit(email_address.value, password.value)"
+                color="primary"
+                fxFlex="40%" fxFlexOffset="30%" fxLayoutAlign="center">
+          Sign In
+        </button>
+      </p>
+      <!-- mat-form-field>
+        <input matInput #postalCode maxlength="5" placeholder="Postal Code" value="94043">
+        <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+      </mat-form-field -->
+    </form>
+  </div>
+  <div fxFlex="15%"></div>
+</div>
+

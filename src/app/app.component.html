@@ -1,0 +1,34 @@
+<mat-toolbar color="basic" *ngIf="_router.url != '/fastlink-iframe'">
+  <div fxFlex="20">
+    <button mat-button routerLink="/">
+      <mat-icon>home</mat-icon>{{title}}
+    </button>
+  </div>
+
+  <div fxFlex="60" fxLayoutAlign="center center">
+    &nbsp; <span style="color: #00AA22; font-size: 1.5em;">GDAX</span> &nbsp;
+  </div>
+  <div fxFlex="20" fxLayoutAlign="end" fxShow="false" fxShow.gt-sm>
+    <div fxLayout="row">
+      <button mat-button [matMenuTriggerFor]="navMenu">
+        <mat-icon>settings</mat-icon>
+      </button>
+      <mat-menu #navMenu="matMenu">
+        <button mat-menu-item>
+          Sign In
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+  <div fxFlex="20"  fxLayoutAlign="end" fxHide="false" fxHide.gt-sm>
+    <button mat-button [mat-menu-trigger-for]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
+
+<mat-menu x-position="before" #menu="matMenu">
+  <button mat-menu-item>Sign In</button>
+</mat-menu>
+
+<router-outlet></router-outlet>

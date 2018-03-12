@@ -1,0 +1,43 @@
+<div fxLayout fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+
+  <div class="row" fxFlex="100">
+    <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="center" fxFlex="100">
+      <div fxFlex="50" fxLayout fxLayoutAlign="center"
+           style="border: 1px solid #ddd; margin: 5px; border-radius: 5px;">
+        
+        <div fxFlex="100" fxLayout="column" style="overflow: auto;">
+          <mat-tab-group>
+            <mat-tab label="One">
+              <div>
+                <h2>Candles</h2>
+                <div [ng2-highstocks]="candles"></div>
+              </div>
+            </mat-tab>
+            <mat-tab label="Two">
+              <h2>Sample stock chart</h2>
+              <div [ng2-highstocks]="stockChart"></div>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+      </div>
+      <div fxFlex="50" fxLayoutAlign="top" fxLayout="column"
+           style="border: 1px solid #ddd; padding: 5px; margin: 5px; border-radius: 5px;">
+        <ag-grid-angular #agGrid style="height: 320px;" class="ag-theme-balham"
+                         [gridOptions]="gridOptions"
+                         [columnDefs]="columnDefs"
+                         [rowData]="askData">
+        </ag-grid-angular>
+        <p>&nbsp;</p>
+        <ag-grid-angular #agGrid style="height: 300px;" class="ag-theme-balham"
+                         [gridOptions]="gridOptions"
+                         [columnDefs]="columnDefs"
+                         [rowData]="bidData"
+                         [headerHeight]="0">
+          
+        </ag-grid-angular>
+      </div>
+    </div>
+  </div>
+
+</div>
+

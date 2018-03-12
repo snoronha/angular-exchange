@@ -1,0 +1,13 @@
+.row {
+    flex-direction: row;
+    height: 90vh;
+}
+
+.mat-h1 {
+    margin: 10px;
+}
+
+.iframe-dashed {
+    border: 1px dashed #dddddd;
+    border-radius: 10px;
+}

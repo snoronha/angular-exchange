@@ -1,0 +1,48 @@
+<div fxLayout fxLayoutAlign="center" fxLayoutGap="10px" fxLayoutGap.xs="0">
+  <div fxFlex="5"></div>
+  <div fxFlex="90">
+    <form [formGroup]="userEditForm" (ngSubmit)="onSubmit(userEditForm.value)">
+      <p>&nbsp;</p>
+      <!-- p>Form value: {{ userEditForm.value | json }}</p>
+      <p>Form status: {{ userEditForm.status | json }}</p -->
+      <p>
+        <mat-form-field fxFlex="100">
+          <input matInput placeholder="Email" type="email" formControlName="email">
+          <mat-error *ngIf="email.invalid && (email.dirty || email.touched)">
+            <mat-error *ngIf="email.errors.required">Email is required</mat-error>
+            <mat-error *ngIf="!email.errors.required && email.errors.email">
+              Please enter a valid Email
+            </mat-error>
+          </mat-error>
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field fxFlex="45">
+          <input matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+        <mat-form-field fxFlex="45" fxFlexOffset="10">
+          <input matInput placeholder="Family Name" formControlName="family_name">
+        </mat-form-field>
+      </p>
+      <p>
+        <mat-form-field fxFlex="45">
+          <input matInput placeholder="Nick Name" formControlName="nickname">
+        </mat-form-field>
+        <mat-form-field fxFlex="45" fxFlexOffset="10">
+          <input matInput placeholder="SMS/Tel Number" formControlName="sms_number">
+        </mat-form-field>
+      </p>
+      <p>&nbsp;</p>
+      <p fxLayoutAlign="center">
+        <button mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="!userEditForm.valid">
+          Save
+        </button>
+      </p>
+    </form>
+  </div>
+  <div fxFlex="5"></div>
+</div>
+

@@ -1,0 +1,29 @@
+<div>&nbsp;</div>
+<div fxLayout fxLayoutAlign="center" fxLayoutGap="0" fxLayoutGap.xs="0">
+  <div fxFlex="1"></div>
+
+  <mat-tab-group fxFlex="100">
+    <mat-tab label="NULL">
+      <div fxFlex="100" class="row">
+        <div fxLayout fxLayoutAlign="center" fxFlex="100">
+          <iframe width="100%" class="iframe-dashed"
+                  [src]="nullTabUrl"
+                  frameborder="0">
+          </iframe>
+        </div>
+      </div>
+    </mat-tab>
+    <mat-tab label="Coinbase">
+      <div fxFlex="100" class="row">
+        <div fxLayout fxLayoutAlign="center" fxFlex="100">
+          <iframe width="100%" class="iframe-dashed"
+                  [src]="coinbaseTabUrl"
+                  frameborder="0">
+          </iframe>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <div fxFlex="1"></div>
+</div>  
