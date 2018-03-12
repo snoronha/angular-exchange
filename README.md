@@ -14,15 +14,15 @@ Runs on the latest node.js (v7.8 or greater). No persistence yet. Manual install
 
 4. Plug in your Binance credentials in server.ts (approx. lines 49-50)
 
-5. Compile server.ts (tsc server.ts). This should create server.js
+5. Compile server.ts (`tsc server.ts`). This should create server.js
 
 5. Start the server: node server.js
 
-6. Start the angular app: `ng start`
+6. Start the angular app: `npm start`
 
 ### Application Usage
 
-1. Open your web browser to connect to port 4201 of the machine running angular.
+1. Open your web browser to http://localhost:4201.
 
 2. Data should stream in and display.
 
